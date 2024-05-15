@@ -1,0 +1,36 @@
+﻿<Window x:Class="jegpalya.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jegpalya"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.ColumnSpan="2"
+                    Orientation="Vertical"
+                    Background="LightGray"
+                    
+                    >
+            <RadioButton x:Name="rdbLepesenkent" Content="Lepesenkent" Margin="0px 5px 0px 0px" />
+            <RadioButton x:Name="rdbAutomatikus" Content="Automatikusan" Margin="0px 5px 0px 0px"></RadioButton>
+            <Slider Minimum="100" Maximum="500" Width="300px" HorizontalAlignment="Left" Margin="0px 5px 0px 0px"></Slider>
+            <Button x:Name="btnLeptet" Width="300px" HorizontalAlignment="Left"  Content="Léptet" Margin="0px 5px 0px 0px" Click="btnLeptet_Click"></Button>
+
+        </StackPanel>
+        <Grid x:Name="grdJegpalya" Grid.Row="1" Background="LightSkyBlue" 
+              ShowGridLines="True">
+            
+      
+        </Grid>
+        <StackPanel Grid.Column="1" Grid.Row="1" Background="CornflowerBlue"></StackPanel>
+    </Grid>
+</Window>
